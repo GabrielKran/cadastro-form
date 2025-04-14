@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif ;
+}
+
+
+.layout {
+    display: flex;
+    height: 100vh;
+}
+
+.img-main {
+    background-color: #d1d1e9;
+    width: 45vw;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-main p {
+    position: relative;
+    bottom: 10px;
+    font-size: 18px;
+}
+
+.content-main {
+    background-color: #fffffe;
+    width: 55vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.content-main h1 {
+    text-align: center;
+    position: relative;
+    bottom: 60px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.form-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.right-item {
+    margin-left: 80px;
+}
+
+.form-item input {
+    border: none;
+    border-bottom: 2.3px solid gray;
+    outline: none;
+    padding: 0px 0px 1px 8px;
+    box-sizing: border-box;
+    font-size: 18px;
+
+    transition: 0.3s ease-in-out;
+}
+
+.form-item label {
+    position: absolute;
+    left: 8px;
+    color: gray;
+    cursor: text;
+    text-transform: uppercase;
+    font-size: 15px;
+
+    transition: 0.3s ease-in-out;
+}
+
+.form-item input:focus,
+.form-item input:valid {
+    border-color: #6246ea;
+}
+
+.form-item input:focus ~ label,
+.form-item input:valid ~ label {
+    transform: translateY(-28px) translateX(-7px);
+    background-color: #6246ea;
+    color: #fffffe;
+    padding: 3px;
+    font-size: 13px;
+}
+
+.form-button {
+    position: relative;
+    bottom: 20px;
+}
+
+.form-button button {
+    background-color: #6246ea;
+    color: #fffffe;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 35.5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-button p {
+    margin-top: 10px;
+}
+
+.form-button span {
+    color: #6246ea;
+    cursor: pointer;
+}
+
+/* Responsividade para tablets */
+@media (max-width: 1060px) {
+    .img-main {
+        display: none;
+    }
+
+    .content-main {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 480px) {
+    .img-main {
+        display: none;
+    }
+
+    .content-main {
+        width: 100%;
+        padding: 20px;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .form-item {
+        margin-bottom: 40px;
+    }
+
+    .form-button {
+        text-align: center;
+    }
+
+    .right-item {
+        margin-left: 0;
+    }
+}
