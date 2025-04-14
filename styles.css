@@ -158,4 +158,9 @@ form {
     .right-item {
         margin-left: 0;
     }
+
+    .content-main h1 {
+        bottom: 10px;
+    }
+
 }
